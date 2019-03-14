@@ -1,0 +1,54 @@
+{
+    "name": "thormaweb/nova-projects",
+    "description": "Laravel Projects Management made with Laravel Nova",
+    "keywords": [
+        "thormaweb",
+        "nova-projects"
+    ],
+    "homepage": "https://github.com/thormaweb/nova-projects",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Emiliano Tisato",
+            "email": "emiliano@thormaweb.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thormaweb\\NovaProjects\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thormaweb\\NovaProjects\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thormaweb\\NovaProjects\\NovaProjectsServiceProvider"
+            ],
+            "aliases": {
+                "NovaProjects": "Thormaweb\\NovaProjects\\NovaProjectsFacade"
+            }
+        }
+    }
+}
